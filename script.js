@@ -1,3 +1,5 @@
+alert("SCRIPT CARREGADO");
+
 // ================================
 // GB BEAUTY
 // Produtos
