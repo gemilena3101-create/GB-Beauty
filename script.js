@@ -38,7 +38,9 @@ const produtos = [
 }
 
 ];
+let carrinho = [];
 
+const contador = document.getElementById("quantidadeCarrinho");
 const grid = document.querySelector(".produtos-grid");
 
 function carregarProdutos(){
@@ -81,10 +83,11 @@ Adicionar ao Carrinho
 
 function adicionarCarrinho(id){
 
-const produto=produtos.find(p=>p.id===id);
+const produto = produtos.find(p => p.id === id);
 
-alert(produto.nome+" adicionado ao carrinho.");
+carrinho.push(produto);
+
+contador.innerHTML = carrinho.length;
 
 }
-
 carregarProdutos();
