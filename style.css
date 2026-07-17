@@ -1078,3 +1078,46 @@ transition:.3s;
 background:#cf417c;
 
 }
+/* ===========================
+   CARRINHO
+=========================== */
+
+.carrinho{
+
+position:fixed;
+
+right:25px;
+
+bottom:95px;
+
+z-index:999;
+
+}
+
+#btnCarrinho{
+
+background:#ffffff;
+
+border:none;
+
+padding:15px 20px;
+
+border-radius:50px;
+
+font-size:18px;
+
+font-weight:600;
+
+cursor:pointer;
+
+box-shadow:0 12px 30px rgba(0,0,0,.15);
+
+transition:.3s;
+
+}
+
+#btnCarrinho:hover{
+
+transform:scale(1.08);
+
+}
