@@ -41,6 +41,9 @@ const produtos = [
 let carrinho = [];
 
 const contador = document.getElementById("quantidadeCarrinho");
+
+console.log(contador);
+
 const grid = document.querySelector(".produtos-grid");
 
 function carregarProdutos(){
