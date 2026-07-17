@@ -957,3 +957,124 @@ grid-template-columns:1fr;
 }
 
 }
+/* ===========================
+   PRODUTOS PREMIUM
+=========================== */
+
+.produto{
+
+background:#fff;
+
+border-radius:22px;
+
+overflow:hidden;
+
+transition:0.35s;
+
+box-shadow:0 12px 35px rgba(0,0,0,.08);
+
+}
+
+.produto:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 22px 45px rgba(232,91,151,.22);
+
+}
+
+.produto img{
+
+width:100%;
+
+height:270px;
+
+object-fit:cover;
+
+transition:.4s;
+
+}
+
+.produto:hover img{
+
+transform:scale(1.05);
+
+}
+
+.info{
+
+padding:22px;
+
+}
+
+.info small{
+
+display:inline-block;
+
+background:#ffe4ef;
+
+color:#d94f87;
+
+padding:6px 14px;
+
+border-radius:30px;
+
+font-size:12px;
+
+font-weight:600;
+
+margin-bottom:14px;
+
+}
+
+.info h3{
+
+font-size:22px;
+
+color:#333;
+
+margin-bottom:12px;
+
+}
+
+.preco{
+
+font-size:30px;
+
+font-weight:bold;
+
+color:#e85b97;
+
+margin-bottom:20px;
+
+}
+
+.info button{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+border-radius:40px;
+
+background:#e85b97;
+
+color:white;
+
+font-size:16px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.info button:hover{
+
+background:#cf417c;
+
+}
