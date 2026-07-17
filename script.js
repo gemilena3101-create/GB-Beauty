@@ -85,7 +85,11 @@ function adicionarCarrinho(id){
 
 const produto = produtos.find(p => p.id === id);
 
+console.log(produto);
+
 carrinho.push(produto);
+
+console.log(carrinho);
 
 contador.innerHTML = carrinho.length;
 
