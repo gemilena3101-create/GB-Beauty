@@ -1,104 +1,101 @@
-alert("SCRIPT CARREGADO");
-
-// ================================
+// ==========================
 // GB BEAUTY
-// Produtos
-// ================================
+// ==========================
 
+// Produtos da loja
 const produtos = [
-
-{
-    id:1,
-    nome:"Gloss Melu",
-    preco:14.90,
-    categoria:"Gloss",
-    imagem:"https://placehold.co/400x400/F8D7E5/CB4C84?text=Gloss"
-},
-
-{
-    id:2,
-    nome:"Body Splash",
-    preco:39.90,
-    categoria:"Body Splash",
-    imagem:"https://placehold.co/400x400/FCE7F1/CB4C84?text=Body+Splash"
-},
-
-{
-    id:3,
-    nome:"Esponja de Maquiagem",
-    preco:12.90,
-    categoria:"Acessórios",
-    imagem:"https://placehold.co/400x400/FFEAF3/CB4C84?text=Esponja"
-},
-
-{
-    id:4,
-    nome:"Paleta de Sombras",
-    preco:49.90,
-    categoria:"Maquiagem",
-    imagem:"https://placehold.co/400x400/F9DCE9/CB4C84?text=Paleta"
-}
-
+    {
+        id: 1,
+        nome: "Gloss Melu",
+        categoria: "Gloss",
+        preco: 14.90,
+        imagem: "https://picsum.photos/400/400?random=1"
+    },
+    {
+        id: 2,
+        nome: "Body Splash",
+        categoria: "Body Splash",
+        preco: 39.90,
+        imagem: "https://picsum.photos/400/400?random=2"
+    },
+    {
+        id: 3,
+        nome: "Esponja de Maquiagem",
+        categoria: "Acessórios",
+        preco: 12.90,
+        imagem: "https://picsum.photos/400/400?random=3"
+    },
+    {
+        id: 4,
+        nome: "Paleta de Sombras",
+        categoria: "Maquiagem",
+        preco: 49.90,
+        imagem: "https://picsum.photos/400/400?random=4"
+    }
 ];
+
+// Carrinho
 let carrinho = [];
 
+// Elementos
+const grid = document.querySelector(".produtos-grid");
 const contador = document.getElementById("quantidadeCarrinho");
 
-console.log(contador);
+// Carregar produtos
+function carregarProdutos() {
 
-const grid = document.querySelector(".produtos-grid");
+    if (!grid) return;
 
-function carregarProdutos(){
+    grid.innerHTML = "";
 
-grid.innerHTML="";
+    produtos.forEach(produto => {
 
-produtos.forEach(produto=>{
+        grid.innerHTML += `
+            <div class="produto">
 
-grid.innerHTML += `
+                <img src="${produto.imagem}" alt="${produto.nome}">
 
-<div class="produto">
+                <div class="info">
 
-<img src="${produto.imagem}" alt="${produto.nome}">
+                    <small>${produto.categoria}</small>
 
-<div class="info">
+                    <h3>${produto.nome}</h3>
 
-<small>${produto.categoria}</small>
+                    <p class="preco">
+                        R$ ${produto.preco.toFixed(2).replace(".", ",")}
+                    </p>
 
-<h3>${produto.nome}</h3>
+                    <button onclick="adicionarCarrinho(${produto.id})">
+                        Adicionar ao Carrinho
+                    </button>
 
-<p class="preco">
-R$ ${produto.preco.toFixed(2).replace(".",",")}
-</p>
+                </div>
 
-<button onclick="adicionarCarrinho(${produto.id})">
+            </div>
+        `;
 
-Adicionar ao Carrinho
+    });
 
-</button>
+}
 
-</div>
+// Adicionar ao carrinho
+function adicionarCarrinho(id){
 
-</div>
+    const produto = produtos.find(p => p.id === id);
 
-`;
+    carrinho.push(produto);
+
+    if(contador){
+
+        contador.textContent = carrinho.length;
+
+    }
+
+}
+
+// Inicializar
+document.addEventListener("DOMContentLoaded", () => {
+
+    carregarProdutos();
 
 });
-
-}
-
-function adicionarCarrinho(id){
-    
-    console.log("Cliquei", id);
-
-const produto = produtos.find(p => p.id === id);
-
-console.log(produto);
-
-carrinho.push(produto);
-
-console.log(carrinho);
-
-contador.innerHTML = carrinho.length;
-
-}
-carregarProdutos();
