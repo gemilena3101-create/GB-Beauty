@@ -1,0 +1,1 @@
+// JavaScript da GB Beauty
