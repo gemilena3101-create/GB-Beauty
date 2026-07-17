@@ -1083,41 +1083,25 @@ background:#cf417c;
 =========================== */
 
 .carrinho{
-
-position:fixed;
-
-right:25px;
-
-bottom:110px;
-
-z-index:1000;
-
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    z-index: 9999;
 }
-   
+
 #btnCarrinho{
-
-background:#ffffff;
-
-border:none;
-
-padding:15px 20px;
-
-border-radius:50px;
-
-font-size:18px;
-
-font-weight:600;
-
-cursor:pointer;
-
-box-shadow:0 12px 30px rgba(0,0,0,.15);
-
-transition:.3s;
-
+    width:60px;
+    height:60px;
+    border:none;
+    border-radius:50%;
+    background:#ff4f92;
+    color:white;
+    font-size:24px;
+    cursor:pointer;
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+    transition:.3s;
 }
 
 #btnCarrinho:hover{
-
-transform:scale(1.08);
-
+    transform:scale(1.08);
 }
