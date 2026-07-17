@@ -85,6 +85,8 @@ Adicionar ao Carrinho
 }
 
 function adicionarCarrinho(id){
+    
+    console.log("Cliquei", id);
 
 const produto = produtos.find(p => p.id === id);
 
