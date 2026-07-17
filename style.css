@@ -1,7 +1,7 @@
-/* ===========================
+/* ====================================
    GB BEAUTY
-   STYLE.CSS
-=========================== */
+   Desenvolvido para GitHub Pages
+==================================== */
 
 *{
     margin:0;
@@ -19,1089 +19,236 @@ body{
     color:#333;
 }
 
-/* HEADER */
+/* =======================
+   HEADER
+======================= */
 
 header{
-
-    width:100%;
-    height:90px;
+    position:sticky;
+    top:0;
+    z-index:1000;
 
     display:flex;
     justify-content:space-between;
     align-items:center;
 
-    padding:0 8%;
+    padding:18px 8%;
 
-    position:fixed;
-    top:0;
+    background:rgba(255,255,255,.96);
 
-    background:white;
+    backdrop-filter:blur(10px);
 
-    box-shadow:0 4px 15px rgba(0,0,0,.05);
-
-    z-index:999;
-
+    box-shadow:0 5px 18px rgba(0,0,0,.05);
 }
 
 .logo h1{
-
     color:#e85b97;
     font-size:34px;
-
 }
 
 .logo p{
-
-    color:#999;
-    font-size:13px;
-
+    color:#888;
+    font-size:14px;
 }
 
 nav{
-
-display:flex;
-gap:35px;
-
+    display:flex;
+    gap:35px;
 }
 
 nav a{
-
-text-decoration:none;
-color:#555;
-font-weight:500;
-transition:.3s;
-
+    color:#555;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
 }
 
 nav a:hover{
-
-color:#e85b97;
-
+    color:#e85b97;
 }
 
-/* HERO */
+/* =======================
+   HERO
+======================= */
 
 .hero{
 
-margin-top:90px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
 
-display:grid;
+    align-items:center;
 
-grid-template-columns:1fr 1fr;
+    gap:60px;
 
-align-items:center;
-
-padding:80px 8%;
-
-min-height:85vh;
-
+    padding:80px 8%;
 }
 
 .hero-text span{
 
-background:#ffdbe9;
+    display:inline-block;
 
-padding:10px 18px;
+    background:#ffe4ef;
 
-border-radius:40px;
+    color:#e85b97;
 
-font-size:13px;
+    padding:8px 18px;
 
-font-weight:600;
+    border-radius:50px;
 
-color:#d94880;
+    font-size:13px;
 
-display:inline-block;
+    font-weight:600;
 
-margin-bottom:25px;
+    margin-bottom:25px;
 
 }
 
 .hero-text h2{
 
-font-size:58px;
+    font-size:56px;
 
-line-height:68px;
+    line-height:65px;
 
-margin-bottom:25px;
-
-color:#222;
+    margin-bottom:25px;
 
 }
 
 .hero-text p{
 
-font-size:18px;
+    font-size:18px;
 
-line-height:32px;
+    color:#666;
 
-color:#777;
+    margin-bottom:35px;
 
-margin-bottom:40px;
-
-max-width:520px;
+    max-width:500px;
 
 }
 
 .botao{
 
-display:inline-block;
+    display:inline-block;
 
-padding:18px 42px;
+    padding:16px 38px;
 
-background:#e85b97;
+    background:#e85b97;
 
-color:white;
+    color:white;
 
-text-decoration:none;
+    text-decoration:none;
 
-border-radius:50px;
+    border-radius:50px;
 
-font-weight:600;
+    font-weight:600;
 
-transition:.3s;
+    transition:.3s;
 
 }
 
 .botao:hover{
 
-transform:translateY(-3px);
+    transform:translateY(-3px);
 
-background:#cf417c;
+    background:#d94f87;
 
 }
 
 .hero-image{
 
-display:flex;
+    display:flex;
 
-justify-content:center;
+    justify-content:center;
 
 }
 
 .imagem-placeholder{
 
-width:480px;
+    width:450px;
 
-height:580px;
+    height:450px;
 
-border-radius:30px;
+    border-radius:30px;
 
-background:linear-gradient(135deg,#ffd8e8,#fff);
+    background:linear-gradient(135deg,#ffd6e8,#fff);
 
-display:flex;
+    display:flex;
 
-justify-content:center;
+    justify-content:center;
 
-align-items:center;
+    align-items:center;
 
-font-size:28px;
+    font-size:26px;
 
-font-weight:bold;
+    color:#c56a95;
 
-color:#d14a84;
+    font-weight:bold;
 
-box-shadow:0 25px 60px rgba(232,91,151,.25);
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
 
 }
-/* ===========================
+
+/* =======================
    CATEGORIAS
-=========================== */
+======================= */
 
 .categorias{
 
-padding:80px 8%;
-
-text-align:center;
+    padding:70px 8%;
 
 }
 
 .categorias h2{
 
-font-size:42px;
+    text-align:center;
 
-margin-bottom:50px;
+    font-size:42px;
 
-color:#333;
+    margin-bottom:50px;
 
 }
 
 .cards-categorias{
 
-display:grid;
+    display:grid;
 
-grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(3,1fr);
 
-gap:30px;
-
-}
-
-.categoria{
-
-background:white;
-
-padding:45px;
-
-border-radius:25px;
-
-box-shadow:0 10px 30px rgba(0,0,0,.06);
-
-transition:.3s;
-
-cursor:pointer;
-
-}
-
-.categoria:hover{
-
-transform:translateY(-10px);
+    gap:30px;
 
 }
 
 .categoria{
 
-font-size:60px;
+    background:white;
 
-}
+    padding:40px;
 
-.categoria h3{
+    border-radius:25px;
 
-margin-top:20px;
+    text-align:center;
 
-font-size:22px;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
 
-color:#555;
-
-}
-
-/* ===========================
-   PRODUTOS
-=========================== */
-
-#produtos{
-
-padding:90px 8%;
-
-}
-
-#produtos h2{
-
-text-align:center;
-
-font-size:42px;
-
-margin-bottom:60px;
-
-}
-
-.produtos-grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-
-gap:30px;
-
-}
-
-/* cartão vazio por enquanto */
-
-.produto{
-
-background:white;
-
-border-radius:25px;
-
-overflow:hidden;
-
-box-shadow:0 15px 35px rgba(0,0,0,.08);
-
-transition:.3s;
-
-}
-
-.produto:hover{
-
-transform:translateY(-8px);
-
-}
-
-/* ===========================
-   WHATSAPP
-=========================== */
-
-.whatsapp{
-
-position:fixed;
-
-right:25px;
-
-bottom:25px;
-
-z-index:999;
-
-}
-
-.whatsapp a{
-
-background:#25D366;
-
-color:white;
-
-padding:16px 22px;
-
-border-radius:50px;
-
-text-decoration:none;
-
-font-weight:600;
-
-box-shadow:0 10px 30px rgba(0,0,0,.2);
-
-transition:.3s;
-
-}
-
-.whatsapp a:hover{
-
-transform:scale(1.08);
-
-}
-
-/* ===========================
-   FOOTER
-=========================== */
-
-footer{
-
-margin-top:80px;
-
-padding:45px;
-
-background:white;
-
-text-align:center;
-
-color:#777;
-
-border-top:1px solid #eee;
-
-}
-
-/* ===========================
-   RESPONSIVO
-=========================== */
-
-@media(max-width:900px){
-
-header{
-
-flex-direction:column;
-
-height:auto;
-
-padding:20px;
-
-}
-
-nav{
-
-margin-top:20px;
-
-gap:18px;
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-}
-
-.hero{
-
-grid-template-columns:1fr;
-
-text-align:center;
-
-}
-
-.hero-text h2{
-
-font-size:42px;
-
-line-height:50px;
-
-}
-
-.hero-text p{
-
-margin:auto;
-margin-top:20px;
-margin-bottom:35px;
-
-}
-
-.imagem-placeholder{
-
-width:100%;
-height:420px;
-
-margin-top:50px;
-
-}
-
-.cards-categorias{
-
-grid-template-columns:1fr;
-
-}
-
-/* ===========================
-   CATEGORIAS
-=========================== */
-
-.categorias{
-
-padding:80px 8%;
-
-text-align:center;
-
-}
-
-.categorias h2{
-
-font-size:42px;
-
-margin-bottom:50px;
-
-color:#333;
-
-}
-
-.cards-categorias{
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:30px;
-
-}
-
-.categoria{
-
-background:white;
-
-padding:45px;
-
-border-radius:25px;
-
-box-shadow:0 10px 30px rgba(0,0,0,.06);
-
-transition:.3s;
-
-cursor:pointer;
-
-}
-
-.categoria:hover{
-
-transform:translateY(-10px);
-
-}
-
-.categoria{
-
-font-size:60px;
-
-}
-
-.categoria h3{
-
-margin-top:20px;
-
-font-size:22px;
-
-color:#555;
-
-}
-
-/* ===========================
-   PRODUTOS
-=========================== */
-
-#produtos{
-
-padding:90px 8%;
-
-}
-
-#produtos h2{
-
-text-align:center;
-
-font-size:42px;
-
-margin-bottom:60px;
-
-}
-
-.produtos-grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-
-gap:30px;
-
-}
-
-/* cartão vazio por enquanto */
-
-.produto{
-
-background:white;
-
-border-radius:25px;
-
-overflow:hidden;
-
-box-shadow:0 15px 35px rgba(0,0,0,.08);
-
-transition:.3s;
-
-}
-
-.produto:hover{
-
-transform:translateY(-8px);
-
-}
-
-/* ===========================
-   WHATSAPP
-=========================== */
-
-.whatsapp{
-
-position:fixed;
-
-right:25px;
-
-bottom:25px;
-
-z-index:999;
-
-}
-
-.whatsapp a{
-
-background:#25D366;
-
-color:white;
-
-padding:16px 22px;
-
-border-radius:50px;
-
-text-decoration:none;
-
-font-weight:600;
-
-box-shadow:0 10px 30px rgba(0,0,0,.2);
-
-transition:.3s;
-
-}
-
-.whatsapp a:hover{
-
-transform:scale(1.08);
-
-}
-
-/* ===========================
-   FOOTER
-=========================== */
-
-footer{
-
-margin-top:80px;
-
-padding:45px;
-
-background:white;
-
-text-align:center;
-
-color:#777;
-
-border-top:1px solid #eee;
-
-}
-
-/* ===========================
-   RESPONSIVO
-=========================== */
-
-@media(max-width:900px){
-
-header{
-
-flex-direction:column;
-
-height:auto;
-
-padding:20px;
-
-}
-
-nav{
-
-margin-top:20px;
-
-gap:18px;
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-}
-
-.hero{
-
-grid-template-columns:1fr;
-
-text-align:center;
-
-}
-
-.hero-text h2{
-
-font-size:42px;
-
-line-height:50px;
-
-}
-
-.hero-text p{
-
-margin:auto;
-margin-top:20px;
-margin-bottom:35px;
-
-}
-
-.imagem-placeholder{
-
-width:100%;
-height:420px;
-
-margin-top:50px;
-
-}
-
-.cards-categorias{
-
-grid-template-columns:1fr;
-
-}
-/* ===========================
-   CATEGORIAS
-=========================== */
-
-.categorias{
-
-padding:80px 8%;
-
-text-align:center;
-
-}
-
-.categorias h2{
-
-font-size:42px;
-
-margin-bottom:50px;
-
-color:#333;
-
-}
-
-.cards-categorias{
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:30px;
-
-}
-
-.categoria{
-
-background:white;
-
-padding:45px;
-
-border-radius:25px;
-
-box-shadow:0 10px 30px rgba(0,0,0,.06);
-
-transition:.3s;
-
-cursor:pointer;
-
-}
-
-.categoria:hover{
-
-transform:translateY(-10px);
-
-}
-
-.categoria{
-
-font-size:60px;
-
-}
-
-.categoria h3{
-
-margin-top:20px;
-
-font-size:22px;
-
-color:#555;
-
-}
-
-/* ===========================
-   PRODUTOS
-=========================== */
-
-#produtos{
-
-padding:90px 8%;
-
-}
-
-#produtos h2{
-
-text-align:center;
-
-font-size:42px;
-
-margin-bottom:60px;
-
-}
-
-.produtos-grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-
-gap:30px;
-
-}
-
-/* cartão vazio por enquanto */
-
-.produto{
-
-background:white;
-
-border-radius:25px;
-
-overflow:hidden;
-
-box-shadow:0 15px 35px rgba(0,0,0,.08);
-
-transition:.3s;
-
-}
-
-.produto:hover{
-
-transform:translateY(-8px);
-
-}
-
-/* ===========================
-   WHATSAPP
-=========================== */
-
-.whatsapp{
-
-position:fixed;
-
-right:25px;
-
-bottom:25px;
-
-z-index:999;
-
-}
-
-.whatsapp a{
-
-background:#25D366;
-
-color:white;
-
-padding:16px 22px;
-
-border-radius:50px;
-
-text-decoration:none;
-
-font-weight:600;
-
-box-shadow:0 10px 30px rgba(0,0,0,.2);
-
-transition:.3s;
-
-}
-
-.whatsapp a:hover{
-
-transform:scale(1.08);
-
-}
-
-/* ===========================
-   FOOTER
-=========================== */
-
-footer{
-
-margin-top:80px;
-
-padding:45px;
-
-background:white;
-
-text-align:center;
-
-color:#777;
-
-border-top:1px solid #eee;
-
-}
-
-/* ===========================
-   RESPONSIVO
-=========================== */
-
-@media(max-width:900px){
-
-header{
-
-flex-direction:column;
-
-height:auto;
-
-padding:20px;
-
-}
-
-nav{
-
-margin-top:20px;
-
-gap:18px;
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-}
-
-.hero{
-
-grid-template-columns:1fr;
-
-text-align:center;
-
-}
-
-.hero-text h2{
-
-font-size:42px;
-
-line-height:50px;
-
-}
-
-.hero-text p{
-
-margin:auto;
-margin-top:20px;
-margin-bottom:35px;
-
-}
-
-.imagem-placeholder{
-
-width:100%;
-height:420px;
-
-margin-top:50px;
-
-}
-
-.cards-categorias{
-
-grid-template-columns:1fr;
-
-}
-
-}
-/* ===========================
-   PRODUTOS PREMIUM
-=========================== */
-
-.produto{
-
-background:#fff;
-
-border-radius:22px;
-
-overflow:hidden;
-
-transition:0.35s;
-
-box-shadow:0 12px 35px rgba(0,0,0,.08);
-
-}
-
-.produto:hover{
-
-transform:translateY(-8px);
-
-box-shadow:0 22px 45px rgba(232,91,151,.22);
-
-}
-
-.produto img{
-
-width:100%;
-
-height:270px;
-
-object-fit:cover;
-
-transition:.4s;
-
-}
-
-.produto:hover img{
-
-transform:scale(1.05);
-
-}
-
-.info{
-
-padding:22px;
-
-}
-
-.info small{
-
-display:inline-block;
-
-background:#ffe4ef;
-
-color:#d94f87;
-
-padding:6px 14px;
-
-border-radius:30px;
-
-font-size:12px;
-
-font-weight:600;
-
-margin-bottom:14px;
-
-}
-
-.info h3{
-
-font-size:22px;
-
-color:#333;
-
-margin-bottom:12px;
-
-}
-
-.preco{
-
-font-size:30px;
-
-font-weight:bold;
-
-color:#e85b97;
-
-margin-bottom:20px;
-
-}
-
-.info button{
-
-width:100%;
-
-padding:15px;
-
-border:none;
-
-border-radius:40px;
-
-background:#e85b97;
-
-color:white;
-
-font-size:16px;
-
-font-weight:600;
-
-cursor:pointer;
-
-transition:.3s;
-
-}
-
-.info button:hover{
-
-background:#cf417c;
-
-}
-/* ===========================
-   CARRINHO
-=========================== */
-
-.carrinho{
-    position: fixed;
-    bottom: 100px;
-    right: 20px;
-    z-index: 9999;
-}
-
-#btnCarrinho{
-    width:60px;
-    height:60px;
-    border:none;
-    border-radius:50%;
-    background:#ff4f92;
-    color:white;
-    font-size:24px;
-    cursor:pointer;
-    box-shadow:0 8px 25px rgba(0,0,0,.25);
     transition:.3s;
+
+    font-size:55px;
+
+    cursor:pointer;
+
 }
 
-#btnCarrinho:hover{
-    transform:scale(1.08);
+.categoria:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.categoria h3{
+
+    margin-top:20px;
+
+    font-size:22px;
+
+    color:#555;
+
 }
