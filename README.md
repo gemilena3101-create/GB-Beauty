@@ -1,1 +1,1 @@
-# GB-Beauty
+WhatsApp integrado.
